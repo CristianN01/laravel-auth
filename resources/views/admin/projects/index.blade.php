@@ -3,7 +3,6 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        @dump($projects)
         <div class="col-12">
             <table class="table table-hover table-success table-striped ">
                 <thead>
@@ -19,6 +18,9 @@
                         </th>
                         <th scope="col">
                             Date
+                        </th>
+                        <th scope="col">
+                            Actions
                         </th>
                     </tr>
                     </thead>
@@ -36,6 +38,9 @@
                             </td>
                             <td>
                                 {{ $project->date }}
+                            </td>
+                            <td>
+                                <a href="{{ route('admin.projects.show', $project) }}" class="btn btn-primary btn-sm">Show</a>
                             </td>
                         </tr>
                     @endforeach
