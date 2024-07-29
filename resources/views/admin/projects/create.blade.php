@@ -28,6 +28,11 @@
                     <label for="content">Content</label>
                     <textarea class="form-control" name="content" id="content" cols="30" rows="20"></textarea>
                 </div>
+
+                <input class="btn btn-primary btn-sm" type="submit" value="Create new Project">
+
+                <input class="btn btn-warning btn-sm" type="reset" value="Reset">
+
             </form>
         </div>
     </div>
