@@ -20,6 +20,14 @@
                 {{ $project->content }}
             </p>
         </div>
+        <div class="footer-buttons">
+            <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-success btn-sm">Edit</a>
+            <form action="{{ route('admin.projects.destroy', $project) }}" method="POST" class="d-inline-block">
+                @method('delete')
+                @csrf
+                <input type="submit" class="btn btn-warning btn-sm" value="Delete">
+            </form>
+        </div>
     </div>
 </div>
 @endsection
