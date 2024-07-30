@@ -42,7 +42,11 @@
                             <td>
                                 <a href="{{ route('admin.projects.show', $project) }}" class="btn btn-primary btn-sm">Show</a>
                                 <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-success btn-sm">Edit</a>
-                                {{-- <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-success btn-sm">Edit</a> --}}
+                                <form action="{{ route('admin.projects.destroy', $project) }}" method="POST" class="d-inline-block">
+                                    @method('delete')
+                                    @csrf
+                                    <input type="submit" class="btn btn-warning btn-sm" value="Delete">
+                                </form>
                             </td>
                         </tr>
                     @endforeach
