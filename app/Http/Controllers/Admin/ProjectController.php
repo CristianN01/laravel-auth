@@ -32,7 +32,17 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
+        $data = $request->validate([
+            "title" => [ "required", "string", "unique:projects", "min:4", "max:255" ],
+            "image" => [ "required", "url", "min:4", "max:255" ],
+            "content" => [ "required", "string", "min:20" ],
+
+        ], [
+            "title.required" => "Title is necessary!",
+            "image.url" => "Image must be a url!!",
+        ]);
+
+
         $data['author'] = Auth::user()->name;
         $data['date'] = Carbon::now();
         $newProject = Project::create($data);

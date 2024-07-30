@@ -13,6 +13,9 @@
             <p>
                 {{ $project->date }}
             </p>
+            <div class="image">
+                <img src="{{ $project->image }}" alt="">
+            </div>
             <p>
                 {{ $project->content }}
             </p>

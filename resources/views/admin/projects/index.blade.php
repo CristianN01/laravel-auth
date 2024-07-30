@@ -41,6 +41,8 @@
                             </td>
                             <td>
                                 <a href="{{ route('admin.projects.show', $project) }}" class="btn btn-primary btn-sm">Show</a>
+                                <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-success btn-sm">Edit</a>
+                                {{-- <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-success btn-sm">Edit</a> --}}
                             </td>
                         </tr>
                     @endforeach
