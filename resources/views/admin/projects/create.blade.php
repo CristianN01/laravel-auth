@@ -32,7 +32,7 @@
                         </div>
                     @enderror
                     <label for="title">Title</label>
-                    <input type="text" name="title" id="title" class="form-control">
+                    <input type="text" name="title" id="title" class="form-control" value="{{ old('title', $project->title) }}">
                 </div>
 
                 <div class="mb-3">
@@ -42,7 +42,7 @@
                         </div>
                     @enderror
                     <label for="image">Image_Url</label>
-                    <input type="text" name="image" id="image" class="form-control">
+                    <input type="text" name="image" id="image" class="form-control" value="{{ old('title', $project->image) }}">
                 </div>
 
                 <div class="mb-3">
@@ -52,7 +52,7 @@
                         </div>
                     @enderror
                     <label for="content">Content</label>
-                    <textarea class="form-control" name="content" id="content" cols="30" rows="20"></textarea>
+                    <textarea class="form-control" name="content" id="content" cols="30" rows="20">{{ old('content', $project->content) }}</textarea>
                 </div>
 
                 <input class="btn btn-primary btn-sm" type="submit" value="Create new Project">
